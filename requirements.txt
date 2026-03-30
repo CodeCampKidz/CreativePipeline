@@ -1,0 +1,35 @@
+# Core
+click==8.1.7
+pydantic==2.10.6
+pydantic-settings==2.7.1
+PyYAML==6.0.2
+Pillow==11.1.0
+openai==1.61.1
+rich==13.9.4
+aiofiles==24.1.0
+deep-translator==1.11.4
+python-slugify==8.0.4
+httpx==0.28.1
+python-dotenv==1.0.1
+
+# Web UI
+fastapi==0.115.8
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+jinja2==3.1.5
+
+# Cloud Storage
+boto3==1.36.24
+
+# Testing
+pytest==8.3.4
+pytest-mock==3.14.0
+pytest-asyncio==0.25.3
+pytest-cov==6.0.0
+
+# QA
+ruff==0.9.7
+mypy==1.15.0
+types-PyYAML==6.0.12.20241230
+types-aiofiles==24.1.0.20241221
+types-Pillow==10.2.0.20240822

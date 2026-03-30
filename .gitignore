@@ -1,0 +1,39 @@
+# Runtime data (generated at runtime, not committed)
+data/output/
+data/uploads/
+
+# Environment
+.env
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+pipeline.log
+
+# Assignment PDF (not a deliverable)
+*.pdf

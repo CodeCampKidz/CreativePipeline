@@ -1,0 +1,26 @@
+# Sample Campaign Brief - Summer Splash 2026
+# This brief demonstrates a campaign with two products targeting Latin America.
+
+campaign_name: "Summer Splash 2026"
+
+products:
+  - name: "Eco Bottle"
+    description: "Sustainable reusable water bottle, sleek matte finish, ocean blue color, modern minimalist design"
+    asset_folder: "data/input_assets/eco_bottle"
+
+  - name: "Sport Cap"
+    description: "Lightweight breathable sports cap, neon green accent stripe, athletic performance style"
+    asset_folder: "data/input_assets/sport_cap"
+
+target_region: "Latin America"
+target_audience: "Health-conscious millennials aged 25-35 who value sustainability and active lifestyles"
+campaign_message: "Stay Fresh. Stay Green. Summer Splash 2026"
+
+languages:
+  - "en"
+  - "es"
+
+aspect_ratios:
+  - "1:1"
+  - "9:16"
+  - "16:9"

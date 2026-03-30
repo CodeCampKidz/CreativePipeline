@@ -1,0 +1,18 @@
+{
+  "campaign_name": "Winter Warmth 2026",
+  "products": [
+    {
+      "name": "Thermal Mug",
+      "description": "Double-wall insulated travel mug, brushed steel finish, keeps drinks hot for 12 hours"
+    },
+    {
+      "name": "Cozy Beanie",
+      "description": "Merino wool knit beanie, charcoal gray with embroidered logo, unisex fit"
+    }
+  ],
+  "target_region": "Northern Europe",
+  "target_audience": "Urban commuters aged 28-45 who value quality and warmth",
+  "campaign_message": "Warm Moments. Cold Days. Winter Warmth 2026",
+  "languages": ["en", "de"],
+  "aspect_ratios": ["1:1", "9:16", "16:9"]
+}

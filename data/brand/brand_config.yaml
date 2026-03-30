@@ -1,0 +1,23 @@
+# Brand Configuration - FreshCo
+# Defines brand guidelines for creative compliance checking.
+
+brand_name: "FreshCo"
+
+primary_colors:
+  - "#00A86B"   # Fresh green
+  - "#1A1A2E"   # Deep navy
+  - "#FFFFFF"   # White
+
+logo_path: "data/brand/logo.png"
+
+prohibited_words:
+  - "guaranteed"
+  - "miracle"
+  - "cure"
+  - "risk-free"
+  - "no side effects"
+  - "best in class"
+  - "scientifically proven"
+  - "instant results"
+
+font_path: "src/assets/fonts/Roboto-Bold.ttf"
