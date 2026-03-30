@@ -41,8 +41,8 @@ The fastest way to get running. Tests execute during the build — if they fail,
 ### 1. Clone and configure
 
 ```bash
-git clone https://github.com/<your-username>/creative-automation-pipeline.git
-cd creative-automation-pipeline
+git clone https://github.com/CodeCampKidz/CreativePipeline.git
+cd CreativePipeline
 cp .env.example .env
 ```
 
