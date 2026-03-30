@@ -196,8 +196,11 @@ class MessageGenerator:
                                                 },
                                             },
                                             "required": [
-                                                "language", "aspect_ratio",
-                                                "platform", "text", "hashtags",
+                                                "language",
+                                                "aspect_ratio",
+                                                "platform",
+                                                "text",
+                                                "hashtags",
                                             ],
                                             "additionalProperties": False,
                                         },

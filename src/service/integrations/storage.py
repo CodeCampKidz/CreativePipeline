@@ -241,9 +241,7 @@ class S3Storage(StorageBackend):
             for page in paginator.paginate(Bucket=self._bucket, Prefix=full_prefix):
                 objects = [{"Key": obj["Key"]} for obj in page.get("Contents", [])]
                 if objects:
-                    self._client.delete_objects(
-                        Bucket=self._bucket, Delete={"Objects": objects}
-                    )
+                    self._client.delete_objects(Bucket=self._bucket, Delete={"Objects": objects})
                     deleted += len(objects)
             logger.info("S3Storage deleted %d objects under %s", deleted, full_prefix)
             return deleted

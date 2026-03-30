@@ -82,7 +82,7 @@ async def generate_creatives(
     for key in form:
         value = form[key]
         if key.startswith("product_asset_") and hasattr(value, "read"):
-            product_slug = key[len("product_asset_"):]
+            product_slug = key[len("product_asset_") :]
             if hasattr(value, "size") and value.size and value.size > 0:
                 product_assets[product_slug] = value
 

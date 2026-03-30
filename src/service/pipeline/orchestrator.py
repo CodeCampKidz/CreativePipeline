@@ -680,9 +680,7 @@ class Pipeline:
             temp = 1.2 if self._force_regenerate else 0.8
             msg_gen = MessageGenerator(client, temperature=temp)
             copy_fragment = (
-                creative_direction.to_copy_prompt_fragment()
-                if creative_direction
-                else None
+                creative_direction.to_copy_prompt_fragment() if creative_direction else None
             )
             history_context = self._format_history_for_messages(self._version_history, product.name)
             return await msg_gen.generate_all(

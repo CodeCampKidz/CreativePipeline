@@ -98,9 +98,7 @@ async def get_campaign(
                 report = json.loads(report_path.read_text(encoding="utf-8"))
                 v_data["result"] = serialize_result_from_report(report, settings)
             except Exception as exc:
-                logger.warning(
-                    "Failed to load report for %s/v%d: %s", campaign_slug, v_num, exc
-                )
+                logger.warning("Failed to load report for %s/v%d: %s", campaign_slug, v_num, exc)
 
         versions.append(v_data)
 

@@ -8,11 +8,13 @@ import shutil
 import uuid
 import zipfile
 from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 import yaml
-from fastapi import UploadFile
 from slugify import slugify
+
+if TYPE_CHECKING:
+    from fastapi import UploadFile
 
 from src.service import Pipeline
 from src.service.core.logger import get_logger
@@ -194,8 +196,12 @@ def start_pipeline_task(
     """
     task = asyncio.create_task(
         run_pipeline_job(
-            job_id, brief, skip_genai, settings,
-            force_regenerate=force_regenerate, input_dir=input_dir,
+            job_id,
+            brief,
+            skip_genai,
+            settings,
+            force_regenerate=force_regenerate,
+            input_dir=input_dir,
         )
     )
     background_tasks.add(task)
@@ -262,9 +268,9 @@ def serialize_result_from_report(report: dict[str, Any], settings: Settings) -> 
         for asset in pr.get("assets", []):
             rel_path = asset.get("output_path", "")
             if rel_path.startswith("data/output/"):
-                rel_path = rel_path[len("data/output/"):]
+                rel_path = rel_path[len("data/output/") :]
             elif rel_path.startswith("output/"):
-                rel_path = rel_path[len("output/"):]
+                rel_path = rel_path[len("output/") :]
             asset_data: dict[str, Any] = {
                 "ratio": asset.get("aspect_ratio", ""),
                 "language": asset.get("language", ""),
@@ -332,9 +338,9 @@ def _serialize_asset(asset: Any) -> dict[str, Any]:
     """
     rel_path = asset.output_path
     if rel_path.startswith("data/output/"):
-        rel_path = rel_path[len("data/output/"):]
+        rel_path = rel_path[len("data/output/") :]
     elif rel_path.startswith("output/"):
-        rel_path = rel_path[len("output/"):]
+        rel_path = rel_path[len("output/") :]
     asset_data: dict[str, Any] = {
         "ratio": asset.aspect_ratio,
         "language": asset.language,
