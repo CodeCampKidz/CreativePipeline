@@ -35,8 +35,12 @@ def create_app() -> FastAPI:
                 "description": "HTML page, health check, and static content",
             },
             {
+                "name": "Pipeline",
+                "description": "Validate briefs and submit generation requests",
+            },
+            {
                 "name": "Jobs",
-                "description": "Submit generation jobs, poll status, and manage job-scoped versions",
+                "description": "Poll job status, manage job-scoped versions, and regenerate",
             },
             {
                 "name": "Campaigns",

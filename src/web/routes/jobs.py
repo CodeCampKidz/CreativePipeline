@@ -31,7 +31,7 @@ logger = get_logger("web")
 router = APIRouter(prefix="/api", tags=["Jobs"])
 
 
-@router.post("/validate")
+@router.post("/validate", tags=["Pipeline"])
 async def validate_brief(
     brief_file: UploadFile = File(..., description="Campaign brief YAML or JSON file"),
 ) -> JSONResponse:
@@ -59,7 +59,7 @@ async def validate_brief(
         return JSONResponse({"valid": False, "error": str(exc)}, status_code=400)
 
 
-@router.post("/generate")
+@router.post("/generate", tags=["Pipeline"])
 async def generate_creatives(
     request: Request,
     settings: Settings = Depends(get_settings),
