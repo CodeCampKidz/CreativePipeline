@@ -11,7 +11,7 @@ from fastapi.staticfiles import StaticFiles
 from src.service.core.logger import setup_logging
 from src.shared.config import get_settings
 
-from .routes import campaigns_router, jobs_router, ui_router
+from .routes import campaigns_router, jobs_router, pipeline_router, ui_router
 
 __all__ = ["create_app"]
 
@@ -69,6 +69,7 @@ def create_app() -> FastAPI:
 
     # Routes
     app.include_router(ui_router)
+    app.include_router(pipeline_router)
     app.include_router(jobs_router)
     app.include_router(campaigns_router)
 

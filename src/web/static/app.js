@@ -195,7 +195,13 @@ async function handleGenerate(event) {
 // ── Regenerate ────────────────────────────────────────────────────────
 
 async function handleRegenerate() {
-    if (!currentJobId) return;
+    if (!currentJobId) {
+        // Campaign loaded from browser — no active job.
+        // User needs to upload the brief again to regenerate.
+        showError("To regenerate, please upload the campaign brief and generate first. " +
+                  "Regeneration requires the original brief which is only available during an active session.");
+        return;
+    }
 
     setGenerating(true);
     showSpinner("Regenerating as new version with fresh AI content...");

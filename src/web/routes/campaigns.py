@@ -160,6 +160,7 @@ async def delete_campaign_version(
     return JSONResponse({"deleted": f"v{version}", "campaign": campaign_slug})
 
 
+
 @router.get("/{campaign_slug}/versions/{version}/download")
 async def download_campaign_version(
     campaign_slug: str,
