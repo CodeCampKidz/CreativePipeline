@@ -26,9 +26,23 @@ def create_app() -> FastAPI:
     setup_logging(settings.log_level)
 
     app = FastAPI(
-        title="Creative Automation Pipeline",
+        title="Creative Automation Pipeline API",
         description="Generate social ad campaign creatives with GenAI",
         version="1.0.0",
+        openapi_tags=[
+            {
+                "name": "UI & Health",
+                "description": "HTML page, health check, and static content",
+            },
+            {
+                "name": "Jobs",
+                "description": "Submit generation jobs, poll status, and manage job-scoped versions",
+            },
+            {
+                "name": "Campaigns",
+                "description": "Browse, download, and delete campaigns persisted on disk",
+            },
+        ],
     )
 
     # CORS middleware

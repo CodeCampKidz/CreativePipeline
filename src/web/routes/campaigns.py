@@ -18,7 +18,7 @@ from src.shared.config import Settings, get_settings
 from ..utils import serialize_result_from_report
 
 logger = get_logger("web")
-router = APIRouter(prefix="/api/campaigns")
+router = APIRouter(prefix="/api/campaigns", tags=["Campaigns"])
 
 
 @router.get("")

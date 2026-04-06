@@ -28,7 +28,7 @@ from ..utils import (
 )
 
 logger = get_logger("web")
-router = APIRouter(prefix="/api")
+router = APIRouter(prefix="/api", tags=["Jobs"])
 
 
 @router.post("/validate")
